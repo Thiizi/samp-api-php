@@ -3,7 +3,7 @@ API para San Andreas Multiplayer(SA-MP) escrito na linguagem PHP.
 
 ## http://localhost?ip=127.0.0.1:7777
 ### Lembre-se claro de substituir 127.0.0.1:7777 pelo ip e a porta do servidor que você deseja.
-### Resultado em json
+### Resultado em JSON:
 ```json
 {
     "error": false,
