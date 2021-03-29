@@ -129,6 +129,8 @@ class SampQueryAPI
 		$iStrlen = ord(fread($this->rSocket, 4));
 		if(!$iStrlen) return -1;
 		
+		$aDetails['address'] = (string) $this->aServer[0].':'.$this->aServer[1];
+
 		$aDetails['hostname'] = (string) fread($this->rSocket, $iStrlen);
 		
 		$iStrlen = ord(fread($this->rSocket, 4));
