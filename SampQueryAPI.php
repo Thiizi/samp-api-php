@@ -120,7 +120,7 @@ class SampQueryAPI
 		
 		fread($this->rSocket, 11);
 	
-		$aDetails['password'] = (integer) ord(fread($this->rSocket, 1));
+		$aDetails['password'] = (bool) ord(fread($this->rSocket, 1));
 		
 		$aDetails['players'] = (integer) $this->toInteger(fread($this->rSocket, 2));
 		
@@ -137,7 +137,7 @@ class SampQueryAPI
 		$aDetails['gamemode'] = (string) fread($this->rSocket, $iStrlen);
 		
 		$iStrlen = ord(fread($this->rSocket, 4));
-		$aDetails['mapname'] = (string) fread($this->rSocket, $iStrlen);
+		$aDetails['language'] = (string) fread($this->rSocket, $iStrlen);
 		
 		return $aDetails;
 	}
